@@ -4,7 +4,7 @@ import attendance from "../assets/Dashboard/attendance.PNG";
 
   function Hero() {
   return (
-    <section className="bg-blue-200 min-h-[80vh] flex items-center px-6 py-16">
+    <section className="bg-gradient-to-br from-sky-300 to-white min-h-[80vh] flex items-center px-6 py-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
        {/* Left Side */}

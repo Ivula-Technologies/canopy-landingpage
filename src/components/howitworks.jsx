@@ -30,7 +30,7 @@ function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="bg-blue-100 py-20 px-6">
+    <section id="how-it-works" className="bg-slate-50 py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center">
           How It Works

@@ -35,7 +35,7 @@ function Audience(){
   },
 ];
     return(
-        <section id="audience" className="py-20 bg-blue-100">
+        <section id="audience" className="py-20 bg-linear-br from-sky-900 to-sky-300">
             <div className="container max-w-7xl mx-auto px-10">   
           
             <h2 className="text-4xl font-bold text-center">
@@ -59,8 +59,7 @@ function Audience(){
           className="w-full md:w-2/5"
           initial={{opacity:0, x: index % 2 === 0 ? -60 : 60}}
           whileInView={{opacity:1, x:0}}
-          transition={{duration:0.8}}  
-           viewport={{ once: true }}    
+          transition={{duration:0.8}}     
                >
                <img
               src={item.image}
