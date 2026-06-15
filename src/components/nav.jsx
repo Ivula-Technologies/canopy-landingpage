@@ -45,7 +45,7 @@ function Nav() {
   href="https://www.ivulatechnologies.com/"
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-sky-800 text-white px-6 py-3 rounded-lg hover:bg-sky-600 inline-block"
+  className="bg-sky-700 text-white px-6 py-3 rounded-lg hover:bg-sky-600 inline-block"
 >
   Get Started
 </a>

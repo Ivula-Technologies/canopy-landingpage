@@ -9,17 +9,17 @@ function Audience(){
     const audiences = [
       {
     title: "Volunteer Groups & Nonprofits",
-    description: "Organize and track volunteer activities easily.",
+    description: "Organize and track volunteer activities and events easily.",
     image: volunteers,
   },
   {
     title: "Churches & fellowships",
-    description: "Coordinate members, services, and church events.",
+    description: "Coordinate members, services, and church events from a single platform.",
     image: churches,
   },
   {
     title: "Youth & Membership-based Organizations",
-    description: "Engage and manage youth programs and activities.",
+    description: "Engage and manage youth programs and activities at a glance with a clear vision of the dashboard.",
     image: youthorg, 
   },
   {
@@ -35,7 +35,7 @@ function Audience(){
   },
 ];
     return(
-        <section id="audience" className="py-20 bg-linear-br from-sky-900 to-sky-300">
+        <section id="audience" className="py-20 bg-linear-to-br from-sky-100 via-sky-200 to-sky-100">
             <div className="container max-w-7xl mx-auto px-10">   
           
             <h2 className="text-4xl font-bold text-center">

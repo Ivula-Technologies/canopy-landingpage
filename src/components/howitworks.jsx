@@ -23,6 +23,12 @@ function HowItWorks() {
 
     {
       number: "04",
+      title: "Create Teams",
+      description:
+        "Group your members into committees, departments, or volunteer groups for better collaboration.",
+    },
+    {
+      number: "05",
       title: "Track Engagement",
       description:
         "Measure participation and gain insights into community growth.",
