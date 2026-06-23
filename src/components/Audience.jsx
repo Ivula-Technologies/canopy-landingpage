@@ -9,17 +9,17 @@ function Audience(){
     const audiences = [
       {
     title: "Volunteer Groups & Nonprofits",
-    description: "Organize and track volunteer activities easily.",
+    description: "Organize and track volunteer activities and events easily.",
     image: volunteers,
   },
   {
     title: "Churches & fellowships",
-    description: "Coordinate members, services, and church events.",
+    description: "Coordinate members, services, and church events from a single platform.",
     image: churches,
   },
   {
     title: "Youth & Membership-based Organizations",
-    description: "Engage and manage youth programs and activities.",
+    description: "Engage and manage youth programs and activities at a glance with a clear vision of the dashboard.",
     image: youthorg, 
   },
   {
@@ -35,7 +35,7 @@ function Audience(){
   },
 ];
     return(
-        <section id="audience" className="py-20 bg-blue-100">
+        <section id="audience" className="py-20 bg-linear-to-br from-sky-100 via-sky-200 to-sky-100">
             <div className="container max-w-7xl mx-auto px-10">   
           
             <h2 className="text-4xl font-bold text-center">
@@ -59,8 +59,7 @@ function Audience(){
           className="w-full md:w-2/5"
           initial={{opacity:0, x: index % 2 === 0 ? -60 : 60}}
           whileInView={{opacity:1, x:0}}
-          transition={{duration:0.8}}  
-           viewport={{ once: true }}    
+          transition={{duration:0.8}}     
                >
                <img
               src={item.image}

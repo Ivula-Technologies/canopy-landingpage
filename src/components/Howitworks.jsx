@@ -23,6 +23,12 @@ function HowItWorks() {
 
     {
       number: "04",
+      title: "Create Teams",
+      description:
+        "Group your members into committees, departments, or volunteer groups for better collaboration.",
+    },
+    {
+      number: "05",
       title: "Track Engagement",
       description:
         "Measure participation and gain insights into community growth.",
@@ -30,7 +36,7 @@ function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="bg-blue-100 py-20 px-6">
+    <section id="how-it-works" className="bg-slate-50 py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center">
           How It Works

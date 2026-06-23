@@ -4,7 +4,7 @@ import attendance from "../assets/Dashboard/attendance.PNG";
 
   function Hero() {
   return (
-    <section className="bg-blue-200 min-h-[80vh] flex items-center px-6 py-16">
+    <section className="bg-linear-to-br from-sky-300 to-white min-h-[80vh] flex items-center px-6 py-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
        {/* Left Side */}
@@ -23,7 +23,7 @@ import attendance from "../assets/Dashboard/attendance.PNG";
   href="https://www.ivulatechnologies.com/"
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-white text-blue-700 px-6 py-3 rounded-lg hover:bg-sky-600 inline-block"
+  className="bg-white text-sky-600 px-6 py-3 rounded-lg hover:bg-sky-800 inline-block"
 >
   Get Started
   </a>
