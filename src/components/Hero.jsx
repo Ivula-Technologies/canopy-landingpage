@@ -1,6 +1,6 @@
-import participation from "../assets/Dashboard/participation.PNG";
-import engagement from "../assets/Dashboard/engagement.PNG";
-import attendance from "../assets/Dashboard/attendance.PNG";
+import participation from "../assets/Dashboard/participation.png";
+import engagement from "../assets/Dashboard/engagement.png";
+import attendance from "../assets/Dashboard/attendance.png";
 
   function Hero() {
   return (
