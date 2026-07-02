@@ -1,16 +1,16 @@
 import {motion} from "framer-motion";
-import churches from "../assets/Dashboard/churches.png";
-import volunteers from "../assets/Dashboard/Volunteers.png";
-import school from "../assets/Dashboard/school.png";
-import charities from "../assets/Dashboard/charities.png";
-import youthorg from "../assets/Dashboard/youthorg.png";
+import churches from "../assets/images/churches.png";
+import Volunteers from "../assets/images/Volunteers.png";
+import school from "../assets/images/school.png";
+import charities from "../assets/images/charities.png";
+import youthorg from "../assets/images/youthorg.png";
 
 function Audience(){
     const audiences = [
       {
     title: "Volunteer Groups & Nonprofits",
     description: "Organize and track volunteer activities and events easily.",
-    image: volunteers,
+    image: Volunteers,
   },
   {
     title: "Churches & fellowships",

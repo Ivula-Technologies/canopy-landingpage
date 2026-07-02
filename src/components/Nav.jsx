@@ -1,7 +1,8 @@
 
-import ivula from "../assets/Dashboard/ivula.png";
+import ivula from "../assets/images/ivula.png";
 function Nav() {
   return (
+
     <nav className="sticky top-0 z-50 bg-white flex justify-between items-center px-8 py-4 shadow-sm">
       {/* Logo */}
       <div className="h-10 flex items-center gap-3">
@@ -21,6 +22,13 @@ function Nav() {
           className="hover:text-blue-600 transition-colors duration-200"
         >
           Features
+        </a>
+
+        <a
+          href="#faq"
+          className="hover:text-blue-600 transition-colors duration-200"
+        >
+          FAQ
         </a>
 
         <a

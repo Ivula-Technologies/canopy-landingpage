@@ -1,6 +1,6 @@
-import participation from "../assets/Dashboard/participation.png";
-import engagement from "../assets/Dashboard/engagement.png";
-import attendance from "../assets/Dashboard/attendance.png";
+import donors from "../assets/images/donors.png";
+import dashboard from "../assets/images/dashboard.png";
+import attendance from "../assets/images/attendance.png";
 
   function Hero() {
   return (
@@ -38,9 +38,10 @@ import attendance from "../assets/Dashboard/attendance.png";
           <div
             className="
               absolute
-              -left-8
-              top-70
-              w-[75%]
+              -left-12
+              top-90
+              w-[45%]
+              h-[45%]
               bg-white
               p-3
               rounded-2xl
@@ -54,8 +55,8 @@ import attendance from "../assets/Dashboard/attendance.png";
             
 
             <img
-              src={participation}
-              alt="Program Participation"
+              src={donors}
+              alt="Donor Management "
               className="rounded-xl w-full"
             />
           </div>
@@ -83,7 +84,7 @@ import attendance from "../assets/Dashboard/attendance.png";
             </div>
 
             <img
-              src={engagement}
+              src={dashboard}
               className="rounded-xl w-full"
             />
           </div>
@@ -93,7 +94,7 @@ import attendance from "../assets/Dashboard/attendance.png";
             className="
               absolute
               -right-8
-              top-70
+              top-90
               w-[75%]
               bg-white
               p-3
