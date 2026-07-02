@@ -50,7 +50,7 @@ function Nav() {
       {/* Action Buttons */}
       <div className="flex gap-3">
         <a
-  href="https://www.ivulatechnologies.com/"
+  href="https://canopy.ivulatechnologies.com/"
   target="_blank"
   rel="noopener noreferrer"
   className="bg-sky-700 text-white px-6 py-3 rounded-lg hover:bg-sky-600 inline-block"
