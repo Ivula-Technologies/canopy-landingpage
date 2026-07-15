@@ -27,7 +27,7 @@ import {useState} from "react";
     },
     {
         question:" Can our organization start with a free plan and upgrade later?",
-        answer:"Yes, Ivula Canopy offers a 30 days trial period that allows organizations to get started without any upfront costs.Other plans include: Freemium Up to 15 members- free forever, Starter $29/month or $290/year - up to 50 members, Growth	$79/month or $790/year - up to 200 members,Community $149/month or $1,490/year - up to 500 members.",
+        answer:"Yes, Ivula Canopy offers a 14 day trial period that allows organizations to get started without any upfront costs.After the expiration of the trial period, you can choose to upgrade to a paid plan."
     }
 ];
 
