@@ -58,7 +58,7 @@ function Nav() {
   Get Started
 </a>
 <a
-  href="https://www.ivulatechnologiesyoutube.com/"
+  href="https://youtu.be/IFxA6xFiHpY"
   target="_blank"
   rel="noopener noreferrer"
   className="border border-sky text-sky-600 px-5 py-3 rounded-lg hover:bg-sky-100 transition-colors duration-200"
