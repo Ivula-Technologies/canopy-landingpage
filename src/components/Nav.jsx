@@ -1,7 +1,8 @@
 
-import ivula from "../assets/Dashboard/ivula.png";
+import ivula from "../assets/images/ivula.png";
 function Nav() {
   return (
+
     <nav className="sticky top-0 z-50 bg-white flex justify-between items-center px-8 py-4 shadow-sm">
       {/* Logo */}
       <div className="h-10 flex items-center gap-3">
@@ -24,6 +25,13 @@ function Nav() {
         </a>
 
         <a
+          href="#faq"
+          className="hover:text-blue-600 transition-colors duration-200"
+        >
+          FAQ
+        </a>
+
+        <a
           href="#how-it-works"
           className="hover:text-blue-600 transition-colors duration-200"
         >
@@ -42,7 +50,7 @@ function Nav() {
       {/* Action Buttons */}
       <div className="flex gap-3">
         <a
-  href="https://www.ivulatechnologies.com/"
+  href="https://canopy.ivulatechnologies.com/"
   target="_blank"
   rel="noopener noreferrer"
   className="bg-sky-700 text-white px-6 py-3 rounded-lg hover:bg-sky-600 inline-block"
@@ -50,7 +58,7 @@ function Nav() {
   Get Started
 </a>
 <a
-  href="https://www.ivulatechnologiesyoutube.com/"
+  href="https://youtu.be/IFxA6xFiHpY"
   target="_blank"
   rel="noopener noreferrer"
   className="border border-sky text-sky-600 px-5 py-3 rounded-lg hover:bg-sky-100 transition-colors duration-200"

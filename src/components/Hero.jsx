@@ -1,6 +1,6 @@
-import participation from "../assets/Dashboard/participation.png";
-import engagement from "../assets/Dashboard/engagement.png";
-import attendance from "../assets/Dashboard/attendance.png";
+import donors from "../assets/images/donors.png";
+import dashboard from "../assets/images/dashboard.png";
+import events from "../assets/images/events.png";
 
   function Hero() {
   return (
@@ -20,7 +20,7 @@ import attendance from "../assets/Dashboard/attendance.png";
           </p>
           
           <a
-  href="https://www.ivulatechnologies.com/"
+  href="https://canopy.ivulatechnologies.com/"
   target="_blank"
   rel="noopener noreferrer"
   className="bg-white text-sky-600 px-6 py-3 rounded-lg hover:bg-sky-800 inline-block"
@@ -34,67 +34,41 @@ import attendance from "../assets/Dashboard/attendance.png";
         {/* Right Side Dashboard Showcase */}
         <div className="hidden md:block relative h-[650px] w-full">
 
-          {/* Left Dashboard */}
+          {/* Donor Management */}
           <div
             className="
               absolute
-              -left-8
-              top-70
-              w-[75%]
+              left-2/3
+              -translate-x-1/2
+              top-90
+              w-[90%]
               bg-white
-              p-3
+              p-5
               rounded-2xl
               shadow-2xl
-              hover:scale-105
+              hover:scale-125
               transition-transform
               duration-300
-              z-10
+              z-40
             "
           >
             
 
             <img
-              src={participation}
-              alt="Program Participation"
+              src={donors}
+              alt="Donor Management "
               className="rounded-xl w-full"
             />
           </div>
 
-          {/* Main Dashboard */}
+          {/* Dashboard image */}
           <div
             className="
               absolute
-              left-1/2
+              left-1/3
               -translate-x-1/2
-              top-4
-              w-[93%]
-              bg-white
-              p-3
-              rounded-2xl
-              shadow-2xl
-              hover:scale-105
-              transition-transform
-              duration-300
-              z-30
-            "
-          >
-            <div className="flex gap-2 mb-3">
-              
-            </div>
-
-            <img
-              src={engagement}
-              className="rounded-xl w-full"
-            />
-          </div>
-
-          {/* Right Dashboard */}
-          <div
-            className="
-              absolute
-              -right-8
-              top-70
-              w-[75%]
+              top-0
+              w-full
               bg-white
               p-3
               rounded-2xl
@@ -106,10 +80,38 @@ import attendance from "../assets/Dashboard/attendance.png";
             "
           >
             <div className="flex gap-2 mb-3">
+              
             </div>
 
             <img
-              src={attendance}
+              src={dashboard}
+              className="rounded-xl w-full"
+            />
+          </div>
+
+          {/* Events image */}
+          <div
+            className="
+              absolute
+              left-1/2
+              -translate-x-1/2
+              top-50
+              w-[95%]
+              bg-white
+              p-3
+              rounded-2xl
+              shadow-2xl
+              hover:scale-120
+              transition-transform
+              duration-300
+              z-30
+            "
+          >
+            <div className="flex gap-2 mb-3">
+            </div>
+
+            <img
+              src={events}
               className="rounded-xl w-full"
             />
           </div>

@@ -42,7 +42,7 @@ function HowItWorks() {
           How It Works
         </h2>
 
-        <div className="grid md:grid-cols-4 gap-8 mt-12">
+        <div className="grid md:grid-cols-5 gap-8 mt-12">
           {steps.map((step) => (
             <div
               key={step.number}
