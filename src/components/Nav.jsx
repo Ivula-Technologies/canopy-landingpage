@@ -30,14 +30,20 @@ function Nav() {
         >
           FAQ
         </a>
-
+                
         <a
           href="#how-it-works"
           className="hover:text-blue-600 transition-colors duration-200"
         >
           How It Works
         </a>
-
+        
+        <a
+          href="#OurStory"
+          className="hover:text-blue-600 transition-colors duration-200"
+        >
+          Our Story
+        </a>
         <a
           href="#audience"
           className="hover:text-blue-600 transition-colors duration-200"

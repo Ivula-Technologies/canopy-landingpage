@@ -34,7 +34,7 @@ import {useState} from "react";
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
     return(
-        <section id="faq" className="py-20 bg-sky-200">
+        <section id="faq" className="py-20 bg-white">
             <div className="container max-w-4xl mx-auto px-10">
                 <h2 className="text-4xl font-bold text-center">
                     Questions? We've Got Answers

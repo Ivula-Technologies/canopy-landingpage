@@ -13,12 +13,12 @@ function Audience(){
     image: Volunteers,
   },
   {
-    title: "Churches & fellowships",
+    title: "Churches & Fellowships",
     description: "Coordinate members, services, and church events from a single platform.",
     image: churches,
   },
   {
-    title: "Youth & Membership-based Organizations",
+    title: "Youth & Membership-Based Organizations",
     description: "Engage and manage youth programs and activities at a glance with a clear vision of the dashboard.",
     image: youthorg, 
   },
@@ -29,22 +29,24 @@ function Audience(){
   },
  
   {
-    title: "Educational programs",
+    title: "Educational Programs",
     description: "Manage student groups, clubs, and events effectively.",
     image: school,
   },
 ];
     return(
-        <section id="audience" className="py-20 bg-linear-to-br from-sky-100 via-sky-200 to-sky-100">
-            <div className="container max-w-7xl mx-auto px-10">   
-          
-            <h2 className="text-4xl font-bold text-center">
-  Who is it For?
-</h2>
-
-<p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
-  Built specifically for organizations that bring people together and create impact.
-</p>
+<section id="audience" className="py-20 bg-linear-to-br from-sky-100 via-sky-200 to-sky-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-sky-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
+          Who is it For?
+        </p>
+        <h2 className="text-4xl font-bold text-center">
+           Built specifically for organizations that bring people together and create impact.
+        </h2>
+        <div className="max-w-3xl mx-auto mt-8 text-lg leading-8 text-gray-600 text-center">
+        <p>If your team is responsible for people, programs, service, and impact, Ivula Canopy helps you keep the work visible and manageable.
+        </p>
+        </div>           
 
 <div className="mt-12">
           {audiences.map((item, index) => (
@@ -70,10 +72,10 @@ function Audience(){
             </motion.div>
 
           {/* Text */}
-          <div className="w-full md:w-1/2">
-            <h2 className="text-4xl font-normal mb-4">
+          <div className="w-full md:w-3/5">
+            <h3 className="text-3xl font-semibold mb-4">
               {item.title}
-            </h2>
+            </h3>
 
             <p className="text-gray-600 text-lg">
               {item.description}
