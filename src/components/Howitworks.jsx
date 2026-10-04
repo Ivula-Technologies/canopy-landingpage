@@ -1,3 +1,5 @@
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
+
 function HowItWorks() {
   const steps = [
     {
@@ -36,9 +38,10 @@ function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="bg-blue-200 py-24">
+    <section id="how-it-works" className="bg-canopy-200 py-24">
   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-sky-700 uppercase tracking-[0.25em] text-sm font-semibold">
+        <Reveal>
+        <p className="text-canopy-700 uppercase tracking-[0.25em] text-sm font-semibold">
           How It Works
           </p>
 
@@ -49,9 +52,10 @@ function HowItWorks() {
 <p className="mt-4 max-w-2xl mx-auto text-gray-600">
     Ivula Canopy is designed for lean teams that need practical software they can adopt quickly.
 </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mt-12">
+        </Reveal>
+        <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mt-12" stagger={0.12}>
           {steps.map((step) => (
-            <div
+            <StaggerItem
               key={step.number}
               className="text-center"
             >
@@ -59,8 +63,8 @@ function HowItWorks() {
                 className="
                   w-16
                   h-16
-                  bg-blue-800
-                  text-white
+                  bg-sun-400
+                  text-canopy-950
                   rounded-full
                   flex
                   items-center
@@ -80,9 +84,9 @@ function HowItWorks() {
               <p className="mt-2 text-gray-600">
                 {step.description}
               </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
       </section>
   );

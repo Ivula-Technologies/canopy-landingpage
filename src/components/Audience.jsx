@@ -1,4 +1,5 @@
 import {motion} from "framer-motion";
+import { Reveal } from "./Reveal";
 import churches from "../assets/images/churches.png";
 import Volunteers from "../assets/images/Volunteers.png";
 import school from "../assets/images/school.png";
@@ -35,9 +36,10 @@ function Audience(){
   },
 ];
     return(
-<section id="audience" className="py-20 bg-linear-to-br from-sky-100 via-sky-200 to-sky-100">
+<section id="audience" className="py-20 bg-linear-to-br from-canopy-100 via-canopy-200 to-canopy-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-sky-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
+        <Reveal>
+        <p className="text-canopy-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
           Who is it For?
         </p>
         <h2 className="text-4xl font-bold text-center">
@@ -46,7 +48,8 @@ function Audience(){
         <div className="max-w-3xl mx-auto mt-8 text-lg leading-8 text-gray-600 text-center">
         <p>If your team is responsible for people, programs, service, and impact, Ivula Canopy helps you keep the work visible and manageable.
         </p>
-        </div>           
+        </div>
+        </Reveal>
 
 <div className="mt-12">
           {audiences.map((item, index) => (
@@ -61,7 +64,8 @@ function Audience(){
           className="w-full md:w-2/5"
           initial={{opacity:0, x: index % 2 === 0 ? -60 : 60}}
           whileInView={{opacity:1, x:0}}
-          transition={{duration:0.8}}     
+          viewport={{once:true, amount:0.3}}
+          transition={{duration:0.8, ease:[0.22, 1, 0.36, 1]}}     
                >
                <img
               src={item.image}
@@ -72,7 +76,7 @@ function Audience(){
             </motion.div>
 
           {/* Text */}
-          <div className="w-full md:w-3/5">
+          <Reveal className="w-full md:w-3/5" delay={0.15}>
             <h3 className="text-3xl font-semibold mb-4">
               {item.title}
             </h3>
@@ -80,8 +84,7 @@ function Audience(){
             <p className="text-gray-600 text-lg">
               {item.description}
             </p>
-        
-          </div>
+          </Reveal>
         </div>
           ))}
         </div>

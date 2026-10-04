@@ -1,4 +1,6 @@
 import {useState} from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Reveal } from "./Reveal";
    const faqs = [
     {
         question:"What is Ivula Canopy and how does it work?",
@@ -11,11 +13,11 @@ import {useState} from "react";
     },
     {
         question:"How does donation management work?",
-        answer: "Ivula Canopy includes a donation management system that enables organizations to track their donors and the donations history.",
+        answer: "Ivula Canopy includes a donation management system that enables organizations to track their donors and donation history, and print donation receipts.",
     },
     {
         question:"Is the platform suitable for both small and large organizations?",
-        answer: "Yes, Ivula Canopy is designed to be flexible and scalable, making it suitable for organizations of all sizes. Whether you're a small team or a large enterprise, Ivula Canopy can adapt to your needs and help you manage your work more effectively."
+        answer: "Yes, Ivula Canopy is designed to be flexible and scalable, making it suitable for organizations of all sizes. It works well for organizations from a handful of members to several hundred people and volunteers."
     },
     {
         question:"Do I require technical expertise to use the system?",
@@ -23,11 +25,11 @@ import {useState} from "react";
     },
     {
         question:"Is our data secure?",
-        answer:"Yes, the platform prioritizes data security and implements industry-standard measures to protect user information. The platform employs encryption, secure authentication, and regular security audits to ensure that your data remains safe and confidential."
+        answer:"Yes, the platform prioritizes data security and implements industry-standard measures to protect user information. Data is encrypted in transit, every account signs in securely, and each organization's records are kept separate so only your team can see them."
     },
     {
         question:" Can our organization start with a free plan and upgrade later?",
-        answer:"Yes, Ivula Canopy offers a 14 day trial period that allows organizations to get started without any upfront costs.After the expiration of the trial period, you can choose to upgrade to a paid plan."
+        answer:"Yes. Every organization starts with a 14-day free trial with no credit card required. After the trial, Canopy is $25 per month per organization."
     }
 ];
 
@@ -36,9 +38,11 @@ export default function FAQ() {
     return(
         <section id="faq" className="py-20 bg-white">
             <div className="container max-w-4xl mx-auto px-10">
+                <Reveal>
                 <h2 className="text-4xl font-bold text-center">
                     Questions? We've Got Answers
                 </h2>
+                </Reveal>
 
                 {faqs.map((faq, index) => (
           <div
@@ -46,6 +50,9 @@ export default function FAQ() {
             className="border-b border-gray-300 py-4"
           >
             <button
+              type="button"
+              aria-expanded={openIndex === index}
+              className="flex w-full items-center gap-3 text-left"
               onClick={() =>
                 setOpenIndex(
                   openIndex === index ? null : index
@@ -53,7 +60,7 @@ export default function FAQ() {
               }
             >
                 <span
-  className={`transition-transform duration-300 ${
+  className={`inline-block transition-transform duration-300 ${
     openIndex === index ? "rotate-90" : ""
   }`}
 >
@@ -64,11 +71,22 @@ export default function FAQ() {
               </span>
             </button>
 
-            {openIndex === index && (
-              <p className="mt-4 text-gray-700">
-                {faq.answer}
-              </p>
-            )}
+            <AnimatePresence initial={false}>
+              {openIndex === index && (
+                <motion.div
+                  key="answer"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-4 text-gray-700">
+                    {faq.answer}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
