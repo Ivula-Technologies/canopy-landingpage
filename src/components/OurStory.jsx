@@ -23,7 +23,7 @@ function OurStory() {
 
 <section id="OurStory" className="bg-white py-24">
     <Reveal className="max-w-6xl mx-auto px-6">
-        <p className="text-sky-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
+        <p className="text-canopy-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
     Our Story
 </p>
 <h2 className="mt-5 text-4xl md:text-4xl font-bold text-center text-gray-900 leading-tight">
@@ -60,7 +60,7 @@ them maintain.</p>
     </Reveal>
     <div className="border-t border-gray-200 my-20"></div>
     <div className="text-center">
-        <p className="text-sky-700 uppercase tracking-[0.25em] text-sm font-semibold">
+        <p className="text-canopy-700 uppercase tracking-[0.25em] text-sm font-semibold">
 Early User Feedback
 </p>
 <h3 className="mt-4 text-3xl md:text-4xl font-bold text-gray-900">
@@ -79,10 +79,10 @@ Early User Feedback
     <StaggerItem
       key={index}
       hover
-      className="bg-blue-200 rounded-2xl shadow-md p-8 transition-shadow duration-300 hover:shadow-xl"
+      className="bg-canopy-200 rounded-2xl shadow-md p-8 transition-shadow duration-300 hover:shadow-xl"
     >
 
-      <div className="text-2xl text-blue-900 mb-5">
+      <div className="text-2xl text-canopy-900 mb-5">
         ❝
       </div>
 

@@ -46,10 +46,10 @@ function Features() {
       ];
 
   return (
-    <section id="features" className=" bg-sky-50 py-20">
+    <section id="features" className=" bg-canopy-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
-        <p className="text-sky-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
+        <p className="text-canopy-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
           Features
         </p>
         <h2 className="text-4xl font-bold text-center">
@@ -65,7 +65,7 @@ function Features() {
             <StaggerItem
               key={feature.title}
               hover
-              className="bg-blue-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+              className="bg-canopy-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow"
             >
               <h3 className="text-xl font-semibold mb-3">
                 {feature.title}

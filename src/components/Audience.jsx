@@ -36,10 +36,10 @@ function Audience(){
   },
 ];
     return(
-<section id="audience" className="py-20 bg-linear-to-br from-sky-100 via-sky-200 to-sky-100">
+<section id="audience" className="py-20 bg-linear-to-br from-canopy-100 via-canopy-200 to-canopy-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
-        <p className="text-sky-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
+        <p className="text-canopy-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
           Who is it For?
         </p>
         <h2 className="text-4xl font-bold text-center">

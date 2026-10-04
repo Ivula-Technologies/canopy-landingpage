@@ -17,17 +17,17 @@ const textItem = {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-sky-300 to-white min-h-[80vh] flex items-center px-6 py-16">
+    <section className="relative overflow-hidden bg-linear-to-br from-canopy-950 via-canopy-900 to-canopy-700 min-h-[80vh] flex items-center px-6 py-16">
       {/* Soft drifting background glows */}
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-sky-400/30 blur-3xl"
+        className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-sun-400/20 blur-3xl"
         animate={{ x: [0, 40, 0], y: [0, 30, 0] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 right-0 h-[28rem] w-[28rem] rounded-full bg-cyan-300/30 blur-3xl"
+        className="pointer-events-none absolute -bottom-40 right-0 h-[28rem] w-[28rem] rounded-full bg-canopy-400/30 blur-3xl"
         animate={{ x: [0, -50, 0], y: [0, -30, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -35,11 +35,11 @@ function Hero() {
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left Side */}
         <motion.div variants={textGroup} initial="hidden" animate="show">
-          <motion.h1 variants={textItem} className="text-5xl md:text-6xl font-bold leading-tight">
+          <motion.h1 variants={textItem} className="text-5xl md:text-6xl font-bold leading-tight text-sun-100">
             Empower Your Community with Better Engagement
           </motion.h1>
 
-          <motion.p variants={textItem} className="mt-6 text-lg text-gray-600 max-w-xl">
+          <motion.p variants={textItem} className="mt-6 text-lg text-canopy-100 max-w-xl">
             Fill volunteer shifts, track attendance and hours, and keep member and
             donor records in one place. Built for churches and nonprofits.
           </motion.p>
@@ -49,13 +49,13 @@ function Hero() {
               href="https://canopy.ivulatechnologies.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 bg-sky-700 text-white px-6 py-3 rounded-lg hover:bg-sky-600 inline-block font-semibold shadow-lg shadow-sky-700/20"
+              className="mt-8 bg-sun-400 text-canopy-950 px-6 py-3 rounded-lg hover:bg-sun-300 inline-block font-semibold shadow-lg shadow-sun-500/30"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.97 }}
             >
               Start your free trial
             </motion.a>
-            <p className="mt-3 text-sm text-gray-600">14 days free. No credit card required.</p>
+            <p className="mt-3 text-sm text-canopy-200">14 days free. No credit card required.</p>
           </motion.div>
         </motion.div>
 

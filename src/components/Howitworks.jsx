@@ -38,10 +38,10 @@ function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="bg-blue-200 py-24">
+    <section id="how-it-works" className="bg-canopy-200 py-24">
   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <Reveal>
-        <p className="text-sky-700 uppercase tracking-[0.25em] text-sm font-semibold">
+        <p className="text-canopy-700 uppercase tracking-[0.25em] text-sm font-semibold">
           How It Works
           </p>
 
@@ -63,8 +63,8 @@ function HowItWorks() {
                 className="
                   w-16
                   h-16
-                  bg-blue-800
-                  text-white
+                  bg-sun-400
+                  text-canopy-950
                   rounded-full
                   flex
                   items-center
