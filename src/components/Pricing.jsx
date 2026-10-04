@@ -1,3 +1,5 @@
+import { Reveal } from "./Reveal";
+
 const included = [
   "Unlimited events, teams, and announcements",
   "Volunteer shifts with public sign-up links and reminders",
@@ -11,6 +13,7 @@ function Pricing() {
   return (
     <section id="pricing" className="bg-white py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <Reveal>
         <p className="text-sky-900 uppercase tracking-[0.25em] font-semibold text-sm">
           Pricing
         </p>
@@ -20,8 +23,9 @@ function Pricing() {
         <p className="mt-4 text-lg text-gray-600">
           Try everything free for 14 days. No credit card required.
         </p>
+        </Reveal>
 
-        <div className="mt-12 mx-auto max-w-md rounded-2xl border border-sky-200 bg-sky-50 p-8 shadow-md text-left">
+        <Reveal delay={0.15} className="mt-12 mx-auto max-w-md rounded-2xl border border-sky-200 bg-sky-50 p-8 shadow-md text-left">
           <h3 className="text-xl font-semibold text-sky-900">Ivula Canopy</h3>
           <p className="mt-4">
             <span className="text-5xl font-bold">$25</span>
@@ -43,7 +47,7 @@ function Pricing() {
           >
             Start your free trial
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

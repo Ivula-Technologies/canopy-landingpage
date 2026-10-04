@@ -1,3 +1,5 @@
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
+
 function Features() {
   const features = [
     {
@@ -46,6 +48,7 @@ function Features() {
   return (
     <section id="features" className=" bg-sky-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal>
         <p className="text-sky-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
           Features
         </p>
@@ -56,11 +59,13 @@ function Features() {
         <p>Replace disconnected spreadsheets and scattered tools with a single workspace for the people, programs, and decisions that keep your organization moving.
         </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        </Reveal>
+        <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {features.map((feature) => (
-            <div
+            <StaggerItem
               key={feature.title}
-              className="bg-blue-100 p-6 rounded-xl shadow-md"
+              hover
+              className="bg-blue-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow"
             >
               <h3 className="text-xl font-semibold mb-3">
                 {feature.title}
@@ -69,9 +74,9 @@ function Features() {
               <p className="text-gray-600">
                 {feature.description}
               </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

@@ -1,9 +1,14 @@
 
+import { motion } from "framer-motion";
 import ivula from "../assets/images/ivula.png";
 function Nav() {
   return (
 
-    <nav className="sticky top-0 z-50 bg-white flex justify-between items-center px-8 py-4 shadow-sm">
+    <motion.nav
+      initial={{ opacity: 0, y: -16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className="sticky top-0 z-50 bg-white flex justify-between items-center px-8 py-4 shadow-sm">
       {/* Logo */}
       <div className="h-10 flex items-center gap-3">
         <img src={ivula} 
@@ -76,7 +81,7 @@ function Nav() {
           Request a Demo
         </a>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

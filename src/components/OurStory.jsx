@@ -1,3 +1,5 @@
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
+
 const testimonials = [
   {
     
@@ -20,7 +22,7 @@ function OurStory() {
     return (
 
 <section id="OurStory" className="bg-white py-24">
-    <div className="max-w-6xl mx-auto px-6">
+    <Reveal className="max-w-6xl mx-auto px-6">
         <p className="text-sky-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
     Our Story
 </p>
@@ -55,7 +57,7 @@ they make can be supported by the records and information that Canopy helps
 them maintain.</p>
 
 </div>
-    </div>
+    </Reveal>
     <div className="border-t border-gray-200 my-20"></div>
     <div className="text-center">
         <p className="text-sky-700 uppercase tracking-[0.25em] text-sm font-semibold">
@@ -70,13 +72,14 @@ Early User Feedback
     workflows to validate the experience and ensure it genuinely simplified
     community management.
 </p>
-<div className="grid gap-8 mt-14 md:grid-cols-2 lg:grid-cols-3">
+<Stagger className="grid gap-8 mt-14 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-6" stagger={0.12}>
 
   {testimonials.map((testimonial, index) => (
 
-    <div
+    <StaggerItem
       key={index}
-      className="bg-blue-200 rounded-2xl shadow-md p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+      hover
+      className="bg-blue-200 rounded-2xl shadow-md p-8 transition-shadow duration-300 hover:shadow-xl"
     >
 
       <div className="text-2xl text-blue-900 mb-5">
@@ -93,11 +96,11 @@ Early User Feedback
         </p>
       </div>
 
-    </div>
+    </StaggerItem>
 
   ))}
 
-</div>
+</Stagger>
 </div>
 </section>
     );

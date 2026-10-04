@@ -1,4 +1,6 @@
 import {useState} from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Reveal } from "./Reveal";
    const faqs = [
     {
         question:"What is Ivula Canopy and how does it work?",
@@ -36,9 +38,11 @@ export default function FAQ() {
     return(
         <section id="faq" className="py-20 bg-white">
             <div className="container max-w-4xl mx-auto px-10">
+                <Reveal>
                 <h2 className="text-4xl font-bold text-center">
                     Questions? We've Got Answers
                 </h2>
+                </Reveal>
 
                 {faqs.map((faq, index) => (
           <div
@@ -46,6 +50,9 @@ export default function FAQ() {
             className="border-b border-gray-300 py-4"
           >
             <button
+              type="button"
+              aria-expanded={openIndex === index}
+              className="flex w-full items-center gap-3 text-left"
               onClick={() =>
                 setOpenIndex(
                   openIndex === index ? null : index
@@ -53,7 +60,7 @@ export default function FAQ() {
               }
             >
                 <span
-  className={`transition-transform duration-300 ${
+  className={`inline-block transition-transform duration-300 ${
     openIndex === index ? "rotate-90" : ""
   }`}
 >
@@ -64,11 +71,22 @@ export default function FAQ() {
               </span>
             </button>
 
-            {openIndex === index && (
-              <p className="mt-4 text-gray-700">
-                {faq.answer}
-              </p>
-            )}
+            <AnimatePresence initial={false}>
+              {openIndex === index && (
+                <motion.div
+                  key="answer"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-4 text-gray-700">
+                    {faq.answer}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>

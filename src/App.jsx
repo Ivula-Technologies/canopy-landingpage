@@ -1,3 +1,4 @@
+import { MotionConfig } from "framer-motion";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
@@ -9,7 +10,7 @@ import Audience from './components/Audience';
 import Footer from './components/Footer';
 function App() {
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <Nav/>
       <Hero />
       <Features />
@@ -19,7 +20,7 @@ function App() {
       <OurStory />
       <FAQ/>
       <Footer/>
-    </>
+    </MotionConfig>
   );
 }
 
