@@ -24,12 +24,6 @@ function Nav() {
           Features
         </a>
 
-        <a
-          href="#faq"
-          className="hover:text-blue-600 transition-colors duration-200"
-        >
-          FAQ
-        </a>
                 
         <a
           href="#how-it-works"
@@ -50,6 +44,18 @@ function Nav() {
         >
           Audience
         </a>
+        <a
+          href="#pricing"
+          className="hover:text-blue-600 transition-colors duration-200"
+        >
+          Pricing
+        </a>
+        <a
+          href="#faq"
+          className="hover:text-blue-600 transition-colors duration-200"
+        >
+          FAQ
+        </a>
 
       </div>
 
@@ -64,9 +70,7 @@ function Nav() {
   Get Started
 </a>
 <a
-  href="https://youtu.be/IFxA6xFiHpY"
-  target="_blank"
-  rel="noopener noreferrer"
+  href="mailto:hello@ivulatechnologies.com?subject=Ivula%20Canopy%20Demo%20Request"
   className="border border-sky text-sky-600 px-5 py-3 rounded-lg hover:bg-sky-100 transition-colors duration-200"
   >
           Request a Demo

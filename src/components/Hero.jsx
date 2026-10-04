@@ -15,18 +15,19 @@ import events from "../assets/images/events.png";
           </h1>
 
           <p className="mt-6 text-lg text-gray-600 max-w-xl">
-            Manage people, volunteers, programs, teams, and engagement insights
-            with a modern platform built for real organizational work.
+            Fill volunteer shifts, track attendance and hours, and keep member and
+            donor records in one place. Built for churches and nonprofits.
           </p>
           
           <a
   href="https://canopy.ivulatechnologies.com/"
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-white text-sky-600 px-6 py-3 rounded-lg hover:bg-sky-800 inline-block"
+  className="mt-8 bg-sky-700 text-white px-6 py-3 rounded-lg hover:bg-sky-600 inline-block font-semibold"
 >
-  Get Started
+  Start your free trial
   </a>
+          <p className="mt-3 text-sm text-gray-600">14 days free. No credit card required.</p>
 
         </div>
         
@@ -85,6 +86,7 @@ import events from "../assets/images/events.png";
 
             <img
               src={dashboard}
+              alt="Engagement dashboard"
               className="rounded-xl w-full"
             />
           </div>
@@ -112,6 +114,7 @@ import events from "../assets/images/events.png";
 
             <img
               src={events}
+              alt="Events and attendance"
               className="rounded-xl w-full"
             />
           </div>

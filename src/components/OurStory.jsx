@@ -8,7 +8,7 @@ const testimonials = [
   {
     role: "Project Manager",
     quote:
-      "Ivula canopy has easened the working process of our team. Everything is organized and easy to access. Organizations can now focus on their work and not worry about managing its members.",
+      "Ivula Canopy has made our team's work much easier. Everything is organized and easy to access. Organizations can now focus on their work and not worry about managing its members.",
     },
   {
     role: "Operations Team",

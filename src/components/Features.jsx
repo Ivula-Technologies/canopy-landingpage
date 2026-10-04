@@ -3,25 +3,31 @@ function Features() {
     {
       title: "Member Management",
       description:
-        "Maintain a complete directory of members, volunteers, staff, and stakeholders in one centralized location .",
+        "Maintain a complete directory of members, volunteers, staff, and stakeholders in one centralized location.",
     },
 
     {
       title: "Teams & Departments",
       description:
-        "Organize individuals into departments, committees, projects, ministries, programs, or volunteer groups..",
+        "Organize individuals into departments, committees, projects, ministries, programs, or volunteer groups.",
     },
 
     {
       title: "Attendance and Participation Tracking",
       description:
-        "Monitor engagement across activities, events, meetings, and programs program involvement.",
+        "Monitor engagement across activities, events, meetings, and programs.",
     },
 
     {
       title: "Analytics and Insight Dashboard",
       description:
        "Transform organizational data into actionable intelligence with leadership dashboards providing visibility into membership growth, participation trends, volunteer activity, attendance patterns, team performance, and organizational engagement.",
+    },
+
+    {
+      title: "Volunteer Shifts & Check-In",
+      description:
+        "Share a public sign-up link for each shift, send automatic reminders, check volunteers in with a QR code, and keep a record of every hour served.",
     },
 
     {

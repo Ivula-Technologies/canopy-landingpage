@@ -11,11 +11,11 @@ import {useState} from "react";
     },
     {
         question:"How does donation management work?",
-        answer: "Ivula Canopy includes a donation management system that enables organizations to track their donors and the donations history.",
+        answer: "Ivula Canopy includes a donation management system that enables organizations to track their donors and donation history, and print donation receipts.",
     },
     {
         question:"Is the platform suitable for both small and large organizations?",
-        answer: "Yes, Ivula Canopy is designed to be flexible and scalable, making it suitable for organizations of all sizes. Whether you're a small team or a large enterprise, Ivula Canopy can adapt to your needs and help you manage your work more effectively."
+        answer: "Yes, Ivula Canopy is designed to be flexible and scalable, making it suitable for organizations of all sizes. It works well for organizations from a handful of members to several hundred people and volunteers."
     },
     {
         question:"Do I require technical expertise to use the system?",
@@ -23,11 +23,11 @@ import {useState} from "react";
     },
     {
         question:"Is our data secure?",
-        answer:"Yes, the platform prioritizes data security and implements industry-standard measures to protect user information. The platform employs encryption, secure authentication, and regular security audits to ensure that your data remains safe and confidential."
+        answer:"Yes, the platform prioritizes data security and implements industry-standard measures to protect user information. Data is encrypted in transit, every account signs in securely, and each organization's records are kept separate so only your team can see them."
     },
     {
         question:" Can our organization start with a free plan and upgrade later?",
-        answer:"Yes, Ivula Canopy offers a 14 day trial period that allows organizations to get started without any upfront costs.After the expiration of the trial period, you can choose to upgrade to a paid plan."
+        answer:"Yes. Every organization starts with a 14-day free trial with no credit card required. After the trial, Canopy is $25 per month per organization."
     }
 ];
 
