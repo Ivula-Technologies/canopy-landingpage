@@ -29,7 +29,7 @@ import { Reveal } from "./Reveal";
     },
     {
         question:" Can our organization start with a free plan and upgrade later?",
-        answer:"Yes. Every organization starts with a 14-day free trial with no credit card required. After the trial, Canopy is $25 per month per organization."
+        answer:"Yes. Every organization starts with a 14-day free trial with no credit card required. After the trial, plans start at $29 per month: Starter ($29, up to 150 people), Growth ($59, up to 750 people) and Pro ($119, unlimited)."
     }
 ];
 
