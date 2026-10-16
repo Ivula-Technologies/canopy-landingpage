@@ -1,4 +1,5 @@
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
+import founderPhoto from "../assets/images/bius-founder.webp";
 
 const testimonials = [
   {
@@ -57,6 +58,26 @@ they make can be supported by the records and information that Canopy helps
 them maintain.</p>
 
 </div>
+<figure className="max-w-3xl mx-auto mt-12 flex flex-col sm:flex-row items-center gap-6 rounded-2xl bg-canopy-200 p-6 sm:p-8 text-center sm:text-left">
+    <img
+        src={founderPhoto}
+        alt="Bius Michael Joseph, Founder and CEO of Ivula Technologies"
+        width="96"
+        height="96"
+        loading="lazy"
+        className="h-24 w-24 flex-shrink-0 rounded-full object-cover ring-4 ring-white shadow-md"
+    />
+    <div>
+        <blockquote className="italic text-gray-700 leading-7">
+            "We built Canopy so the people who keep churches and nonprofits running
+            can spend their time on people, not spreadsheets."
+        </blockquote>
+        <figcaption className="mt-3">
+            <span className="font-semibold text-gray-900">Bius Michael Joseph</span>
+            <span className="text-gray-600"> · Founder &amp; CEO, Ivula Technologies</span>
+        </figcaption>
+    </div>
+</figure>
     </Reveal>
     <div className="border-t border-gray-200 my-20"></div>
     <div className="text-center">
