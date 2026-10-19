@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { bookingUrl } from "../lib/booking";
 import donors from "../assets/images/donors.png";
 import dashboard from "../assets/images/dashboard.png";
 import events from "../assets/images/events.png";
@@ -55,7 +56,12 @@ function Hero() {
             >
               Start your free trial
             </motion.a>
-            <p className="mt-3 text-sm text-canopy-200">14 days free. No credit card required.</p>
+            <p className="mt-3 text-sm text-canopy-200">
+              14 days free. No credit card required. Questions first?{" "}
+              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-sun-300 underline-offset-4 hover:underline">
+                Book a call with our founder
+              </a>
+            </p>
           </motion.div>
         </motion.div>
 
