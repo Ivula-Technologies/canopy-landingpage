@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import canopyMark from "../assets/images/canopy-mark.svg";
+import { bookingUrl } from "../lib/booking";
 function Nav() {
   return (
 
@@ -74,10 +75,12 @@ function Nav() {
   Get Started
 </a>
 <a
-  href="mailto:hello@ivulatechnologies.com?subject=Ivula%20Canopy%20Demo%20Request"
+  href={bookingUrl}
+  target="_blank"
+  rel="noopener noreferrer"
   className="hidden sm:inline-block border border-canopy-600 text-canopy-700 px-5 py-3 rounded-lg hover:bg-canopy-100 transition-colors duration-200"
   >
-          Request a Demo
+          Book a Demo
         </a>
       </div>
     </motion.nav>

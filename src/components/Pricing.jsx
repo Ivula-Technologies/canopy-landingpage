@@ -1,4 +1,5 @@
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
+import { bookingUrl } from "../lib/booking";
 
 const plans = [
   { name: "Starter", price: 29, people: "Up to 150 people", tagline: "For small churches and volunteer groups" },
@@ -76,6 +77,13 @@ function Pricing() {
               </li>
             ))}
           </ul>
+        </Reveal>
+
+        <Reveal delay={0.15} className="mt-8 text-center text-gray-700">
+          Not sure which plan fits your church or team?{" "}
+          <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-canopy-700 underline-offset-4 hover:underline">
+            Book a free call with our founder
+          </a>
         </Reveal>
       </div>
     </section>

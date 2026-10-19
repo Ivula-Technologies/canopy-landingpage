@@ -1,4 +1,5 @@
 import canopyMark from "../assets/images/canopy-mark.svg";
+import { bookingUrl } from "../lib/booking";
 
 function Footer() {
   return (
@@ -11,6 +12,7 @@ function Footer() {
         </div>
         <div className="flex gap-6">
           <a href="https://canopy.ivulatechnologies.com/" className="hover:text-sun-300 transition-colors">Get Started</a>
+          <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="hover:text-sun-300 transition-colors">Book a call</a>
           <a href="mailto:hello@ivulatechnologies.com" className="hover:text-sun-300 transition-colors">Contact</a>
         </div>
       </div>
