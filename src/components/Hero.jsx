@@ -46,9 +46,7 @@ function Hero() {
 
           <motion.div variants={textItem}>
             <motion.a
-              href="https://canopy.ivulatechnologies.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://canopy.ivulatechnologies.com/signup"
               className="mt-8 bg-sun-400 text-canopy-950 px-6 py-3 rounded-lg hover:bg-sun-300 inline-block font-semibold shadow-lg shadow-sun-500/30"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.97 }}
@@ -59,6 +57,16 @@ function Hero() {
           </motion.div>
         </motion.div>
 
+        {/* On phones the stacked showcase is hidden, so show one screen. */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5, ease }}
+          className="md:hidden bg-white p-2 rounded-2xl shadow-2xl"
+        >
+          <img src={events} alt="Events and volunteer sign-ups in Canopy" className="rounded-xl w-full" />
+        </motion.div>
+
         {/* Right Side Dashboard Showcase */}
         <div className="hidden md:block relative h-[650px] w-full">
           {/* Donor Management */}
@@ -66,7 +74,7 @@ function Hero() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease }}
-            className="absolute left-2/3 -translate-x-1/2 top-90 w-[90%] bg-white p-5 rounded-2xl shadow-2xl hover:scale-110 transition-[scale] duration-300 z-40"
+            className="absolute left-[55%] -translate-x-1/2 top-90 w-[90%] bg-white p-5 rounded-2xl shadow-2xl hover:scale-110 transition-[scale] duration-300 z-40"
           >
             <img src={donors} alt="Donor management" className="rounded-xl w-full" />
           </motion.div>

@@ -1,18 +1,26 @@
-# React + Vite
+# Canopy landing page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The marketing site for [Ivula Canopy](https://canopy.ivulatechnologies.com), volunteer and member management for churches and nonprofits. Every call to action sends visitors to the app's sign-up page.
 
-Currently, two official plugins are available:
+Built with Vite, React 19, Tailwind CSS 4 and framer-motion. It is a static site: there is no server code.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Work on it
 
-## React Compiler
+```bash
+npm ci
+npm run dev      # http://localhost:5173
+npm run lint
+npm run build    # writes the site to dist/
+```
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Sections live in `src/components/`, one file each, and `src/App.jsx` puts them in order. Brand colors (`canopy-*` greens, `sun-*` ambers) and the Lora display font are defined in `src/index.css`.
 
-Note: This will impact Vite dev & build performances.
+## Publish on cPanel
 
-## Expanding the ESLint configuration
+1. Run `npm run build`.
+2. Zip the contents of `dist/` (not the folder itself).
+3. In cPanel File Manager, open the domain's document root, upload the zip and choose Extract, overwriting the old files.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The Canopy app has its own landing page at canopy.ivulatechnologies.com, so this site is only needed on a second marketing domain. Once that domain is chosen, change the `og:image` URL in `index.html` to the full `https://` address so link previews show the image.
+
+Every pull request runs lint and a build (`.github/workflows/ci.yml`).

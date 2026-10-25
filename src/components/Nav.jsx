@@ -66,9 +66,7 @@ function Nav() {
       {/* Action Buttons */}
       <div className="flex gap-3">
         <a
-  href="https://canopy.ivulatechnologies.com/"
-  target="_blank"
-  rel="noopener noreferrer"
+  href="https://canopy.ivulatechnologies.com/signup"
   className="bg-canopy-700 text-white px-4 sm:px-6 py-3 rounded-lg hover:bg-canopy-600 inline-block whitespace-nowrap"
 >
   Get Started
