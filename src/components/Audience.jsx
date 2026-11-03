@@ -3,8 +3,8 @@ import { Reveal } from "./Reveal";
 import churches from "../assets/images/churches.png";
 import Volunteers from "../assets/images/Volunteers.png";
 import school from "../assets/images/school.png";
-import charities from "../assets/images/charities.png";
-import youthorg from "../assets/images/youthorg.png";
+import charities from "../assets/images/charities.webp";
+import youthorg from "../assets/images/youthorg.webp";
 
 function Audience(){
     const audiences = [
@@ -70,6 +70,8 @@ function Audience(){
                <img
               src={item.image}
               alt={item.title}
+              loading="lazy"
+              decoding="async"
               className="w-full h-80 object-cover rounded-2xl shadow-lg
               transition-transform duration-300 hover:scale-105"
             />

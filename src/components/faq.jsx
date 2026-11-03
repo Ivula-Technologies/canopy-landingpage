@@ -24,6 +24,10 @@ import { Reveal } from "./Reveal";
         answer:" No, Ivula Canopy is designed to be user-friendly and intuitive, requiring no technical expertise. The platform provides a simple and straightforward interface that allows users to easily navigate and utilize its features without the need for advanced technical skills."
     },
     {
+        question:"Is there a phone app?",
+        answer:"Yes. Open Canopy on your phone and add it to your home screen. It opens full screen like any other app on iPhone and Android, with nothing to download from an app store."
+    },
+    {
         question:"Is our data secure?",
         answer:"Yes, the platform prioritizes data security and implements industry-standard measures to protect user information. Data is encrypted in transit, every account signs in securely, and each organization's records are kept separate so only your team can see them."
     },

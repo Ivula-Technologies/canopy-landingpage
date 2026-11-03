@@ -45,9 +45,9 @@ function HowItWorks() {
           How It Works
           </p>
 
-<h4 className="mt-4 max-w-3xl mx-auto text-4xl font-bold text-gray-900">
+<h2 className="mt-4 max-w-3xl mx-auto text-4xl font-bold text-gray-900">
    Launch without a complicated implementation process. Get started in minutes.
-   </h4>
+   </h2>
 
 <p className="mt-4 max-w-2xl mx-auto text-gray-600">
     Ivula Canopy is designed for lean teams that need practical software they can adopt quickly.
