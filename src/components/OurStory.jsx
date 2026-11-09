@@ -3,7 +3,6 @@ import founderPhoto from "../assets/images/bius-founder.webp";
 
 const testimonials = [
   {
-    
     role: "Beta tester",
     quote:
       "Canopy made organizing members and events much simpler. Having everything in one place saved us valuable time.",
@@ -12,7 +11,7 @@ const testimonials = [
     role: "Project Manager",
     quote:
       "Ivula Canopy has made our team's work much easier. Everything is organized and easy to access. Organizations can now focus on their work and not worry about managing its members.",
-    },
+  },
   {
     role: "Operations Team",
     quote:
@@ -20,110 +19,88 @@ const testimonials = [
   },
 ];
 function OurStory() {
-    return (
+  return (
+    <section id="OurStory" className="bg-white py-24">
+      <Reveal className="mx-auto max-w-6xl px-6">
+        <p className="text-center text-sm font-semibold tracking-[0.25em] text-canopy-900 uppercase">Our Story</p>
+        <h2 className="mt-5 text-center text-4xl leading-tight font-bold text-gray-900 md:text-4xl">
+          Helping communities spend less time managing and more time making an impact.
+        </h2>
+        <div className="mx-auto mt-8 max-w-3xl space-y-6 text-center text-lg leading-8 text-gray-600">
+          <p>
+            {" "}
+            Canopy was built from a simple observation: organizations are built around people, yet many organizations
+            still struggle to understand and manage the people who make their work possible. Over time, organizations
+            lose more than just data. They lose valuable knowledge about the people they serve and the people who
+            support their mission. Volunteers come and go. Members participate at different levels. Teams change. Events
+            happen. Programs grow. But in many organizations, the records that capture these interactions are scattered
+            across spreadsheets, emails, messages, and individual files or are not captured at all.
+          </p>
 
-<section id="OurStory" className="bg-white py-24">
-    <Reveal className="max-w-6xl mx-auto px-6">
-        <p className="text-canopy-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
-    Our Story
-</p>
-<h2 className="mt-5 text-4xl md:text-4xl font-bold text-center text-gray-900 leading-tight">
-    Helping communities spend less time managing and more time making an impact.
-</h2>
-<div className="max-w-3xl mx-auto mt-8 space-y-6 text-lg leading-8 text-gray-600 text-center">
-    <p>  Canopy was built from a simple observation: organizations are built around
-people, yet many organizations still struggle to understand and manage the
-people who make their work possible.
-Over time, organizations lose more than just data. They lose valuable knowledge
-about the people they serve and the people who support their mission.
-Volunteers come and go. Members participate at different levels. Teams change.
-Events happen. Programs grow. But in many organizations, the records that
-capture these interactions are scattered across spreadsheets, emails,
-messages, and individual files or are not captured at all.</p>
+          <p>
+            We envisioned a platform that would help organizations maintain lasting records of their people and their
+            level of activity and participation, creating a more effective way to manage volunteers and other
+            stakeholders. Administrators can track participation and engagement over time and use this information when
+            inviting people to future events and activities. Past participation provides a clear record of their
+            involvement and helps organizations make more informed decisions about who to engage.
+          </p>
 
-<p>We envisioned a platform that would help organizations maintain lasting records
-of their people and their level of activity and participation, creating a more
-effective way to manage volunteers and other stakeholders.
-Administrators can track participation and engagement over time and use this
-information when inviting people to future events and activities. Past
-participation provides a clear record of their involvement and helps organizations
-make more informed decisions about who to engage.</p>
+          <p>
+            This idea was also extended to other stakeholders within organizations to support better decision-making. By
+            understanding attendance, funding, donations, contributions, activity, and responses, organizations can make
+            decisions based on the information they have collected over time. The decisions they make can be supported
+            by the records and information that Canopy helps them maintain.
+          </p>
+        </div>
+        <figure className="mx-auto mt-12 flex max-w-3xl flex-col items-center gap-6 rounded-2xl bg-canopy-200 p-6 text-center sm:flex-row sm:p-8 sm:text-left">
+          <img
+            src={founderPhoto}
+            alt="Bius Michael Joseph, Founder and CEO of Ivula Technologies"
+            width="96"
+            height="96"
+            loading="lazy"
+            className="h-24 w-24 flex-shrink-0 rounded-full object-cover shadow-md ring-4 ring-white"
+          />
+          <div>
+            <blockquote className="leading-7 text-gray-700 italic">
+              "We built Canopy so the people who keep churches and nonprofits running can spend their time on people,
+              not spreadsheets."
+            </blockquote>
+            <figcaption className="mt-3">
+              <span className="font-semibold text-gray-900">Bius Michael Joseph</span>
+              <span className="text-gray-600"> · Founder &amp; CEO, Ivula Technologies</span>
+            </figcaption>
+          </div>
+        </figure>
+      </Reveal>
+      <div className="my-20 border-t border-gray-200"></div>
+      <div className="text-center">
+        <p className="text-sm font-semibold tracking-[0.25em] text-canopy-700 uppercase">Early User Feedback</p>
+        <h3 className="mt-4 text-3xl font-bold text-gray-900 md:text-4xl">What Our Team Experienced</h3>
 
-<p>
-This idea was also extended to other stakeholders within organizations to
-support better decision-making. By understanding attendance, funding,
-donations, contributions, activity, and responses, organizations can make
-decisions based on the information they have collected over time. The decisions
-they make can be supported by the records and information that Canopy helps
-them maintain.</p>
-
-</div>
-<figure className="max-w-3xl mx-auto mt-12 flex flex-col sm:flex-row items-center gap-6 rounded-2xl bg-canopy-200 p-6 sm:p-8 text-center sm:text-left">
-    <img
-        src={founderPhoto}
-        alt="Bius Michael Joseph, Founder and CEO of Ivula Technologies"
-        width="96"
-        height="96"
-        loading="lazy"
-        className="h-24 w-24 flex-shrink-0 rounded-full object-cover ring-4 ring-white shadow-md"
-    />
-    <div>
-        <blockquote className="italic text-gray-700 leading-7">
-            "We built Canopy so the people who keep churches and nonprofits running
-            can spend their time on people, not spreadsheets."
-        </blockquote>
-        <figcaption className="mt-3">
-            <span className="font-semibold text-gray-900">Bius Michael Joseph</span>
-            <span className="text-gray-600"> · Founder &amp; CEO, Ivula Technologies</span>
-        </figcaption>
-    </div>
-</figure>
-    </Reveal>
-    <div className="border-t border-gray-200 my-20"></div>
-    <div className="text-center">
-        <p className="text-canopy-700 uppercase tracking-[0.25em] text-sm font-semibold">
-Early User Feedback
-</p>
-<h3 className="mt-4 text-3xl md:text-4xl font-bold text-gray-900">
-    What Our Team Experienced
-</h3>
-
-<p className="mt-4 max-w-2xl mx-auto text-gray-600">
-    Before Canopy was released publicly, our team used it in real-world
-    workflows to validate the experience and ensure it genuinely simplified
-    community management.
-</p>
-<Stagger className="grid gap-8 mt-14 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-6" stagger={0.12}>
-
-  {testimonials.map((testimonial, index) => (
-
-    <StaggerItem
-      key={index}
-      hover
-      className="bg-canopy-200 rounded-2xl shadow-md p-8 transition-shadow duration-300 hover:shadow-xl"
-    >
-
-      <div className="text-2xl text-canopy-900 mb-5">
-        ❝
-      </div>
-
-      <p className="italic text-gray-600 leading-7">
-        {testimonial.quote}
-      </p>
-
-      <div className="mt-8">
-        <p className="font-semibold text-gray-900">
-          {testimonial.role}
+        <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+          Before Canopy was released publicly, our team used it in real-world workflows to validate the experience and
+          ensure it genuinely simplified community management.
         </p>
+        <Stagger className="mx-auto mt-14 grid max-w-6xl gap-8 px-6 md:grid-cols-2 lg:grid-cols-3" stagger={0.12}>
+          {testimonials.map((testimonial, index) => (
+            <StaggerItem
+              key={index}
+              hover
+              className="rounded-2xl bg-canopy-200 p-8 shadow-md transition-shadow duration-300 hover:shadow-xl"
+            >
+              <div className="mb-5 text-2xl text-canopy-900">❝</div>
+
+              <p className="leading-7 text-gray-600 italic">{testimonial.quote}</p>
+
+              <div className="mt-8">
+                <p className="font-semibold text-gray-900">{testimonial.role}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
       </div>
-
-    </StaggerItem>
-
-  ))}
-
-</Stagger>
-</div>
-</section>
-    );
+    </section>
+  );
 }
 export default OurStory;
