@@ -33,6 +33,18 @@ function Features() {
     },
 
     {
+      title: "Kids Check-in",
+      description:
+        "Check families in at the door, print name labels that show allergies, and hand each child back only to an adult holding the matching pickup tag.",
+    },
+
+    {
+      title: "Giving & Donor Receipts",
+      description:
+        "Keep donor records and giving history in the same place as your people, and print a receipt for any gift.",
+    },
+
+    {
       title: "Communication Tools",
       description:
         "Reach members quickly through centralized communication.",

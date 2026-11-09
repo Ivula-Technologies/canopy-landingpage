@@ -1,5 +1,5 @@
 import {useState} from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { Reveal } from "./Reveal";
    const faqs = [
     {
@@ -14,6 +14,10 @@ import { Reveal } from "./Reveal";
     {
         question:"How does donation management work?",
         answer: "Ivula Canopy includes a donation management system that enables organizations to track their donors and donation history, and print donation receipts.",
+    },
+    {
+        question:"Can we use Canopy for kids check-in?",
+        answer: "Yes. Staff check a family in at the door and print a name label for each child, with any allergies on it, plus one pickup tag for the parent. Both show the same code, so a child goes home only with an adult holding the matching tag. If a tag is lost, staff check a photo ID and the note is kept in the day's log.",
     },
     {
         question:"Is the platform suitable for both small and large organizations?",
@@ -77,7 +81,7 @@ export default function FAQ() {
 
             <AnimatePresence initial={false}>
               {openIndex === index && (
-                <motion.div
+                <m.div
                   key="answer"
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
@@ -88,7 +92,7 @@ export default function FAQ() {
                   <div className="pt-4 text-gray-700">
                     {faq.answer}
                   </div>
-                </motion.div>
+                </m.div>
               )}
             </AnimatePresence>
           </div>

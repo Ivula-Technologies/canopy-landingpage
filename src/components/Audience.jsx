@@ -1,4 +1,4 @@
-import {motion} from "framer-motion";
+import { m } from "framer-motion";
 import { Reveal } from "./Reveal";
 import churches from "../assets/images/churches.png";
 import Volunteers from "../assets/images/Volunteers.png";
@@ -60,7 +60,7 @@ function Audience(){
           }`}
         >
           {/* Image */}
-          <motion.div
+          <m.div
           className="w-full md:w-2/5"
           initial={{opacity:0, x: index % 2 === 0 ? -60 : 60}}
           whileInView={{opacity:1, x:0}}
@@ -75,7 +75,7 @@ function Audience(){
               className="w-full h-80 object-cover rounded-2xl shadow-lg
               transition-transform duration-300 hover:scale-105"
             />
-            </motion.div>
+            </m.div>
 
           {/* Text */}
           <Reveal className="w-full md:w-3/5" delay={0.15}>

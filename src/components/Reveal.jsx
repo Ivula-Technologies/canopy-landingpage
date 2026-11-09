@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 // Fades and lifts content into view the first time it scrolls on screen.
 export function Reveal({ children, delay = 0, y = 24, className = "", as = "div" }) {
-  const Component = motion[as];
+  const Component = m[as];
   return (
     <Component
       className={className}
@@ -19,7 +19,7 @@ export function Reveal({ children, delay = 0, y = 24, className = "", as = "div"
 // Staggers its children (wrap each in <StaggerItem>) as the group scrolls into view.
 export function Stagger({ children, className = "", stagger = 0.08 }) {
   return (
-    <motion.div
+    <m.div
       className={className}
       initial="hidden"
       whileInView="show"
@@ -27,13 +27,13 @@ export function Stagger({ children, className = "", stagger = 0.08 }) {
       variants={{ hidden: {}, show: { transition: { staggerChildren: stagger } } }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
 export function StaggerItem({ children, className = "", hover = false }) {
   return (
-    <motion.div
+    <m.div
       className={className}
       variants={{
         hidden: { opacity: 0, y: 24 },
@@ -42,6 +42,6 @@ export function StaggerItem({ children, className = "", hover = false }) {
       whileHover={hover ? { y: -6, transition: { duration: 0.2 } } : undefined}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }

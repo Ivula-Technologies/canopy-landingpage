@@ -1,4 +1,4 @@
-import { MotionConfig } from "framer-motion";
+import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
@@ -10,6 +10,8 @@ import Audience from './components/Audience';
 import Footer from './components/Footer';
 function App() {
   return (
+    // LazyMotion with the small domAnimation bundle keeps the page light on phones.
+    <LazyMotion features={domAnimation} strict>
     <MotionConfig reducedMotion="user">
       <Nav/>
       <Hero />
@@ -21,6 +23,7 @@ function App() {
       <FAQ/>
       <Footer/>
     </MotionConfig>
+    </LazyMotion>
   );
 }
 

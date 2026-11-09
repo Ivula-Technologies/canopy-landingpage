@@ -1,11 +1,11 @@
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import canopyMark from "../assets/images/canopy-mark.svg";
 import { bookingUrl } from "../lib/booking";
 function Nav() {
   return (
 
-    <motion.nav
+    <m.nav
       initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -81,7 +81,7 @@ function Nav() {
           Book a Demo
         </a>
       </div>
-    </motion.nav>
+    </m.nav>
   );
 }
 
