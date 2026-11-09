@@ -16,14 +16,13 @@ function Features() {
 
     {
       title: "Attendance and Participation Tracking",
-      description:
-        "Monitor engagement across activities, events, meetings, and programs.",
+      description: "Monitor engagement across activities, events, meetings, and programs.",
     },
 
     {
       title: "Analytics and Insight Dashboard",
       description:
-       "Transform organizational data into actionable intelligence with leadership dashboards providing visibility into membership growth, participation trends, volunteer activity, attendance patterns, team performance, and organizational engagement.",
+        "Transform organizational data into actionable intelligence with leadership dashboards providing visibility into membership growth, participation trends, volunteer activity, attendance patterns, team performance, and organizational engagement.",
     },
 
     {
@@ -46,46 +45,38 @@ function Features() {
 
     {
       title: "Communication Tools",
-      description:
-        "Reach members quickly through centralized communication.",
+      description: "Reach members quickly through centralized communication.",
     },
 
     {
       title: "Reports & Insights",
-      description:
-        "Generate meaningful reports for better decision making.",
+      description: "Generate meaningful reports for better decision making.",
     },
-      ];
+  ];
 
   return (
-    <section id="features" className=" bg-canopy-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="bg-canopy-50 py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-        <p className="text-canopy-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
-          Features
-        </p>
-        <h2 className="text-4xl font-bold text-center">
-          Everything your organization needs to stay organized.
-        </h2>
-        <div className="max-w-3xl mx-auto mt-8 text-lg leading-8 text-gray-600 text-center">
-        <p>Replace disconnected spreadsheets and scattered tools with a single workspace for the people, programs, and decisions that keep your organization moving.
-        </p>
-        </div>
+          <p className="text-center text-sm font-semibold tracking-[0.25em] text-canopy-900 uppercase">Features</p>
+          <h2 className="text-center text-4xl font-bold">Everything your organization needs to stay organized.</h2>
+          <div className="mx-auto mt-8 max-w-3xl text-center text-lg leading-8 text-gray-600">
+            <p>
+              Replace disconnected spreadsheets and scattered tools with a single workspace for the people, programs,
+              and decisions that keep your organization moving.
+            </p>
+          </div>
         </Reveal>
-        <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <Stagger className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <StaggerItem
               key={feature.title}
               hover
-              className="bg-canopy-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+              className="rounded-xl bg-canopy-100 p-6 shadow-md transition-shadow hover:shadow-xl"
             >
-              <h3 className="text-xl font-semibold mb-3">
-                {feature.title}
-              </h3>
+              <h3 className="mb-3 text-xl font-semibold">{feature.title}</h3>
 
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
+              <p className="text-gray-600">{feature.description}</p>
             </StaggerItem>
           ))}
         </Stagger>

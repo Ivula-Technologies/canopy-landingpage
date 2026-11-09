@@ -3,7 +3,13 @@ import { bookingUrl } from "../lib/booking";
 
 const plans = [
   { name: "Starter", price: 29, people: "Up to 150 people", tagline: "For small churches and volunteer groups" },
-  { name: "Growth", price: 59, people: "Up to 750 people", tagline: "For growing congregations and nonprofits", featured: true },
+  {
+    name: "Growth",
+    price: 59,
+    people: "Up to 750 people",
+    tagline: "For growing congregations and nonprofits",
+    featured: true,
+  },
   { name: "Pro", price: 119, people: "Unlimited people", tagline: "For large and multi-site organizations" },
 ];
 
@@ -22,11 +28,9 @@ const signupUrl = "https://canopy.ivulatechnologies.com/signup";
 function Pricing() {
   return (
     <section id="pricing" className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
-          <p className="text-canopy-900 uppercase tracking-[0.25em] font-semibold text-sm">
-            Pricing
-          </p>
+          <p className="text-sm font-semibold tracking-[0.25em] text-canopy-900 uppercase">Pricing</p>
           <h2 className="mt-4 text-4xl font-bold">Every feature on every plan.</h2>
           <p className="mt-4 text-lg text-gray-600">
             Pick a plan by the size of your community. Try everything free for 14 days, no credit card required.
@@ -38,14 +42,16 @@ function Pricing() {
             <StaggerItem
               key={plan.name}
               hover
-              className={`flex flex-col rounded-2xl p-8 shadow-md text-left ${
+              className={`flex flex-col rounded-2xl p-8 text-left shadow-md ${
                 plan.featured ? "bg-canopy-900 text-sun-50 ring-2 ring-sun-400" : "bg-canopy-50 ring-1 ring-canopy-100"
               }`}
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-semibold">{plan.name}</h3>
                 {plan.featured && (
-                  <span className="rounded-full bg-sun-400 px-3 py-1 text-xs font-semibold text-canopy-950">Most popular</span>
+                  <span className="rounded-full bg-sun-400 px-3 py-1 text-xs font-semibold text-canopy-950">
+                    Most popular
+                  </span>
                 )}
               </div>
               <p className={`mt-2 text-sm ${plan.featured ? "text-canopy-100" : "text-gray-600"}`}>{plan.tagline}</p>
@@ -58,8 +64,10 @@ function Pricing() {
                 href={signupUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-8 block text-center px-6 py-3 rounded-lg font-semibold ${
-                  plan.featured ? "bg-sun-400 text-canopy-950 hover:bg-sun-300" : "bg-canopy-700 text-white hover:bg-canopy-600"
+                className={`mt-8 block rounded-lg px-6 py-3 text-center font-semibold ${
+                  plan.featured
+                    ? "bg-sun-400 text-canopy-950 hover:bg-sun-300"
+                    : "bg-canopy-700 text-white hover:bg-canopy-600"
                 }`}
               >
                 Start free trial
@@ -69,7 +77,9 @@ function Pricing() {
         </Stagger>
 
         <Reveal delay={0.1} className="mx-auto mt-10 max-w-3xl rounded-2xl bg-canopy-50 p-6 ring-1 ring-canopy-100">
-          <p className="text-center text-sm font-semibold uppercase tracking-wide text-canopy-700">Included on every plan</p>
+          <p className="text-center text-sm font-semibold tracking-wide text-canopy-700 uppercase">
+            Included on every plan
+          </p>
           <ul className="mt-4 grid gap-2 text-gray-700 sm:grid-cols-2">
             {included.map((item) => (
               <li key={item} className="flex gap-2">
@@ -82,7 +92,12 @@ function Pricing() {
 
         <Reveal delay={0.15} className="mt-8 text-center text-gray-700">
           Not sure which plan fits your church or team?{" "}
-          <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-canopy-700 underline-offset-4 hover:underline">
+          <a
+            href={bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-canopy-700 underline-offset-4 hover:underline"
+          >
             Book a free call with our founder
           </a>
         </Reveal>

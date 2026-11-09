@@ -1,82 +1,84 @@
-import {useState} from "react";
+import { useState } from "react";
 import { AnimatePresence, m } from "framer-motion";
 import { Reveal } from "./Reveal";
-   const faqs = [
-    {
-        question:"What is Ivula Canopy and how does it work?",
-        answer: <p> Ivula Canopy is a cloud-based SaaS platform that helps nonprofits, churches, volunteer groups, youth organizations, and community associations replace spreadsheets with one dashboard.
-            It provides tools for managing members, volunteers, programs, teams, and engagement insights. Users can import or register members, organize events, create teams, and track engagement through a user-friendly interface.</p>
-    },
-    {
-        question:"Can I track member participation and engagement?",
-        answer: "Yes, Ivula Canopy provides robust analytics and reporting features that allow you to track member participation and engagement levels. You can monitor activity, contributions, and overall involvement within the platform.",
-    },
-    {
-        question:"How does donation management work?",
-        answer: "Ivula Canopy includes a donation management system that enables organizations to track their donors and donation history, and print donation receipts.",
-    },
-    {
-        question:"Can we use Canopy for kids check-in?",
-        answer: "Yes. Staff check a family in at the door and print a name label for each child, with any allergies on it, plus one pickup tag for the parent. Both show the same code, so a child goes home only with an adult holding the matching tag. If a tag is lost, staff check a photo ID and the note is kept in the day's log.",
-    },
-    {
-        question:"Is the platform suitable for both small and large organizations?",
-        answer: "Yes, Ivula Canopy is designed to be flexible and scalable, making it suitable for organizations of all sizes. It works well for organizations from a handful of members to several hundred people and volunteers."
-    },
-    {
-        question:"Do I require technical expertise to use the system?",
-        answer:" No, Ivula Canopy is designed to be user-friendly and intuitive, requiring no technical expertise. The platform provides a simple and straightforward interface that allows users to easily navigate and utilize its features without the need for advanced technical skills."
-    },
-    {
-        question:"Is there a phone app?",
-        answer:"Yes. Open Canopy on your phone and add it to your home screen. It opens full screen like any other app on iPhone and Android, with nothing to download from an app store."
-    },
-    {
-        question:"Is our data secure?",
-        answer:"Yes, the platform prioritizes data security and implements industry-standard measures to protect user information. Data is encrypted in transit, every account signs in securely, and each organization's records are kept separate so only your team can see them."
-    },
-    {
-        question:" Can our organization start with a free plan and upgrade later?",
-        answer:"Yes. Every organization starts with a 14-day free trial with no credit card required. After the trial, plans start at $29 per month: Starter ($29, up to 150 people), Growth ($59, up to 750 people) and Pro ($119, unlimited)."
-    }
+const faqs = [
+  {
+    question: "What is Ivula Canopy and how does it work?",
+    answer: (
+      <p>
+        {" "}
+        Ivula Canopy is a cloud-based SaaS platform that helps nonprofits, churches, volunteer groups, youth
+        organizations, and community associations replace spreadsheets with one dashboard. It provides tools for
+        managing members, volunteers, programs, teams, and engagement insights. Users can import or register members,
+        organize events, create teams, and track engagement through a user-friendly interface.
+      </p>
+    ),
+  },
+  {
+    question: "Can I track member participation and engagement?",
+    answer:
+      "Yes, Ivula Canopy provides robust analytics and reporting features that allow you to track member participation and engagement levels. You can monitor activity, contributions, and overall involvement within the platform.",
+  },
+  {
+    question: "How does donation management work?",
+    answer:
+      "Ivula Canopy includes a donation management system that enables organizations to track their donors and donation history, and print donation receipts.",
+  },
+  {
+    question: "Can we use Canopy for kids check-in?",
+    answer:
+      "Yes. Staff check a family in at the door and print a name label for each child, with any allergies on it, plus one pickup tag for the parent. Both show the same code, so a child goes home only with an adult holding the matching tag. If a tag is lost, staff check a photo ID and the note is kept in the day's log.",
+  },
+  {
+    question: "Is the platform suitable for both small and large organizations?",
+    answer:
+      "Yes, Ivula Canopy is designed to be flexible and scalable, making it suitable for organizations of all sizes. It works well for organizations from a handful of members to several hundred people and volunteers.",
+  },
+  {
+    question: "Do I require technical expertise to use the system?",
+    answer:
+      " No, Ivula Canopy is designed to be user-friendly and intuitive, requiring no technical expertise. The platform provides a simple and straightforward interface that allows users to easily navigate and utilize its features without the need for advanced technical skills.",
+  },
+  {
+    question: "Is there a phone app?",
+    answer:
+      "Yes. Open Canopy on your phone and add it to your home screen. It opens full screen like any other app on iPhone and Android, with nothing to download from an app store.",
+  },
+  {
+    question: "Is our data secure?",
+    answer:
+      "Yes, the platform prioritizes data security and implements industry-standard measures to protect user information. Data is encrypted in transit, every account signs in securely, and each organization's records are kept separate so only your team can see them.",
+  },
+  {
+    question: " Can our organization start with a free plan and upgrade later?",
+    answer:
+      "Yes. Every organization starts with a 14-day free trial with no credit card required. After the trial, plans start at $29 per month: Starter ($29, up to 150 people), Growth ($59, up to 750 people) and Pro ($119, unlimited).",
+  },
 ];
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
-    return(
-        <section id="faq" className="py-20 bg-white">
-            <div className="container max-w-4xl mx-auto px-10">
-                <Reveal>
-                <h2 className="text-4xl font-bold text-center">
-                    Questions? We've Got Answers
-                </h2>
-                </Reveal>
+  return (
+    <section id="faq" className="bg-white py-20">
+      <div className="container mx-auto max-w-4xl px-10">
+        <Reveal>
+          <h2 className="text-center text-4xl font-bold">Questions? We've Got Answers</h2>
+        </Reveal>
 
-                {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="border-b border-gray-300 py-4"
-          >
+        {faqs.map((faq, index) => (
+          <div key={index} className="border-b border-gray-300 py-4">
             <button
               type="button"
               aria-expanded={openIndex === index}
               className="flex w-full items-center gap-3 text-left"
-              onClick={() =>
-                setOpenIndex(
-                  openIndex === index ? null : index
-                )
-              }
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
-                <span
-  className={`inline-block transition-transform duration-300 ${
-    openIndex === index ? "rotate-90" : ""
-  }`}
->
-  ▸
-</span>
-              <span className="font-medium">
-                {faq.question}
+              <span
+                className={`inline-block transition-transform duration-300 ${openIndex === index ? "rotate-90" : ""}`}
+              >
+                ▸
               </span>
+              <span className="font-medium">{faq.question}</span>
             </button>
 
             <AnimatePresence initial={false}>
@@ -89,9 +91,7 @@ export default function FAQ() {
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   className="overflow-hidden"
                 >
-                  <div className="pt-4 text-gray-700">
-                    {faq.answer}
-                  </div>
+                  <div className="pt-4 text-gray-700">{faq.answer}</div>
                 </m.div>
               )}
             </AnimatePresence>
@@ -101,4 +101,3 @@ export default function FAQ() {
     </section>
   );
 }
-                

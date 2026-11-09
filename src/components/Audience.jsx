@@ -6,96 +6,90 @@ import school from "../assets/images/school.png";
 import charities from "../assets/images/charities.webp";
 import youthorg from "../assets/images/youthorg.webp";
 
-function Audience(){
-    const audiences = [
-      {
-    title: "Volunteer Groups & Nonprofits",
-    description: "Organize and track volunteer activities and events easily.",
-    image: Volunteers,
-  },
-  {
-    title: "Churches & Fellowships",
-    description: "Coordinate members, services, and church events from a single platform.",
-    image: churches,
-  },
-  {
-    title: "Youth & Membership-Based Organizations",
-    description: "Engage and manage youth programs and activities at a glance with a clear vision of the dashboard.",
-    image: youthorg, 
-  },
-  {
-    title: "Charities & Community Organizations",
-    description: "Track outreach programs and community support.",
-    image: charities,
-  },
- 
-  {
-    title: "Educational Programs",
-    description: "Manage student groups, clubs, and events effectively.",
-    image: school,
-  },
-];
-    return(
-<section id="audience" className="py-20 bg-linear-to-br from-canopy-100 via-canopy-200 to-canopy-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+function Audience() {
+  const audiences = [
+    {
+      title: "Volunteer Groups & Nonprofits",
+      description: "Organize and track volunteer activities and events easily.",
+      image: Volunteers,
+    },
+    {
+      title: "Churches & Fellowships",
+      description: "Coordinate members, services, and church events from a single platform.",
+      image: churches,
+    },
+    {
+      title: "Youth & Membership-Based Organizations",
+      description: "Engage and manage youth programs and activities at a glance with a clear vision of the dashboard.",
+      image: youthorg,
+    },
+    {
+      title: "Charities & Community Organizations",
+      description: "Track outreach programs and community support.",
+      image: charities,
+    },
+
+    {
+      title: "Educational Programs",
+      description: "Manage student groups, clubs, and events effectively.",
+      image: school,
+    },
+  ];
+  return (
+    <section id="audience" className="bg-linear-to-br from-canopy-100 via-canopy-200 to-canopy-100 py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-        <p className="text-canopy-900 uppercase tracking-[0.25em] font-semibold text-sm text-center">
-          Who is it For?
-        </p>
-        <h2 className="text-4xl font-bold text-center">
-           Built specifically for organizations that bring people together and create impact.
-        </h2>
-        <div className="max-w-3xl mx-auto mt-8 text-lg leading-8 text-gray-600 text-center">
-        <p>If your team is responsible for people, programs, service, and impact, Ivula Canopy helps you keep the work visible and manageable.
-        </p>
-        </div>
+          <p className="text-center text-sm font-semibold tracking-[0.25em] text-canopy-900 uppercase">
+            Who is it For?
+          </p>
+          <h2 className="text-center text-4xl font-bold">
+            Built specifically for organizations that bring people together and create impact.
+          </h2>
+          <div className="mx-auto mt-8 max-w-3xl text-center text-lg leading-8 text-gray-600">
+            <p>
+              If your team is responsible for people, programs, service, and impact, Ivula Canopy helps you keep the
+              work visible and manageable.
+            </p>
+          </div>
         </Reveal>
 
-<div className="mt-12">
+        <div className="mt-12">
           {audiences.map((item, index) => (
             <div
-          key={index}
-          className={`flex flex-col md:flex-row items-center gap-12 mb-24 ${
-            index % 2 !== 0 ? "md:flex-row-reverse" : ""
-          }`}
-        >
-          {/* Image */}
-          <m.div
-          className="w-full md:w-2/5"
-          initial={{opacity:0, x: index % 2 === 0 ? -60 : 60}}
-          whileInView={{opacity:1, x:0}}
-          viewport={{once:true, amount:0.3}}
-          transition={{duration:0.8, ease:[0.22, 1, 0.36, 1]}}     
-               >
-               <img
-              src={item.image}
-              alt={item.title}
-              loading="lazy"
-              decoding="async"
-              className="w-full h-80 object-cover rounded-2xl shadow-lg
-              transition-transform duration-300 hover:scale-105"
-            />
-            </m.div>
+              key={index}
+              className={`mb-24 flex flex-col items-center gap-12 md:flex-row ${
+                index % 2 !== 0 ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              {/* Image */}
+              <m.div
+                className="w-full md:w-2/5"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-80 w-full rounded-2xl object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+                />
+              </m.div>
 
-          {/* Text */}
-          <Reveal className="w-full md:w-3/5" delay={0.15}>
-            <h3 className="text-3xl font-semibold mb-4">
-              {item.title}
-            </h3>
+              {/* Text */}
+              <Reveal className="w-full md:w-3/5" delay={0.15}>
+                <h3 className="mb-4 text-3xl font-semibold">{item.title}</h3>
 
-            <p className="text-gray-600 text-lg">
-              {item.description}
-            </p>
-          </Reveal>
-        </div>
+                <p className="text-lg text-gray-600">{item.description}</p>
+              </Reveal>
+            </div>
           ))}
         </div>
-        </div>
-        </section>
-        );
-      }
-    
-    
-
+      </div>
+    </section>
+  );
+}
 
 export default Audience;
